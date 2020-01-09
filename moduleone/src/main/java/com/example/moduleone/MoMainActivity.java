@@ -76,10 +76,11 @@ public class MoMainActivity extends AppCompatActivity {
 
         int id = view.getId();
         if (id == R.id.mo_am_btn_module1) {
+            this.finish();
             System.out.println("======go Home======");
 //                Resource IDs can not be used in a switch statement in Android library
         } else if (id == R.id.am_btn_module2) {
-            this.finish();
+
         } else if (id == R.id.mo_am_btn_module3) {
         } else if (id == R.id.mo_am_btn_module4) {
         }
