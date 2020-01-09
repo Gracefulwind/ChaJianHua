@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.am_btn_module2:
+
                 break;
             case R.id.am_btn_module3:
                 break;
