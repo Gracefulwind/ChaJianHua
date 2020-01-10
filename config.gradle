@@ -50,7 +50,9 @@ ext {
             rxlifecycle2SdkVersion  : "2.1.0",
             espressoSdkVersion      : "2.2.2",
             canarySdkVersion        : "1.5.1",
-            rxbindingSdkVersion     : "0.4.0"
+            rxbindingSdkVersion     : "0.4.0",
+            arouterApiSdkVersion   : "1.5.0",
+            arouterCompilerSdkVersion   : "1.2.2"
     ]
 
     dependencies = [
@@ -70,6 +72,8 @@ ext {
             "rxandroid"                 : "io.reactivex.rxjava2:rxandroid:${version.rxandroidSdkVersion}",
             //systemUtils
             "gson"                      : "com.google.code.gson:gson:${version.gsonSdkVersion}",
-            "permission"                : "com.yanzhenjie:permission:${version.yanzhenjiePermission}"
+            "permission"                : "com.yanzhenjie:permission:${version.yanzhenjiePermission}",
+            "arouterApi"                : "com.alibaba:arouter-api:${version.arouterApiSdkVersion}",
+            "arouterCompiler"                : "com.alibaba:arouter-compiler:${version.arouterCompilerSdkVersion}"
     ]
 }

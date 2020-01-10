@@ -19,6 +19,13 @@ android {
 //        versionCode 1
 //        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
     }
     buildTypes {
 
@@ -106,9 +113,15 @@ dependencies {
     implementation rootProject.ext.dependencies.gson
     implementation rootProject.ext.dependencies.permission
 
+    implementation rootProject.ext.dependencies.arouterApi
+    annotationProcessor rootProject.ext.dependencies.arouterCompiler
+    implementation project(path: ':baselibrary')
+
     if (rootProject.ext.isBuildApp) {
 //        runtimeOnly project(':modulebase')
     } else {
         implementation project(':moduleone')
+        implementation project(':module_begin')
+        implementation project(':module_home')
     }
 }

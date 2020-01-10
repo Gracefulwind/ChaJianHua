@@ -1,2 +1,2 @@
-include ':app', ':moduleone', ':mylibrary'
+include ':app', ':moduleone', ':mylibrary', ':baselibrary', ':module_begin', ':module_home'
 rootProject.name='ChaJianHua'

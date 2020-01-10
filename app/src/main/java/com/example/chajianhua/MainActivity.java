@@ -7,6 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.baselibrary.base.BaseActivity;
+import com.example.baselibrary.util.JumpUtil;
 import com.example.moduleone.MoMainActivity;
 
 import butterknife.BindView;
@@ -15,7 +18,7 @@ import butterknife.OnClick;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.am_btn_module1)
     Button amBtnModule1;
@@ -44,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.am_btn_module2:
-
+//                ARouter.getInstance()
+//                        .build(JumpUtil.HomeActivity) //页面的String值
+////                .withString("key",s) //附带参数
+//                        .navigation();
+//                ARouter.getInstance().build("/test/home").navigation();
+                ARouter.getInstance().build("/main/test1Activity").navigation();
                 break;
             case R.id.am_btn_module3:
                 break;
