@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.baselibrary.base.BaseActivity;
@@ -56,8 +54,14 @@ public class MainActivity extends BaseActivity {
                 ARouter.getInstance().build(JumpUtil.PageHome.HOME_ACTIVITY).navigation();
                 break;
             case R.id.am_btn_module3:
+                ARouter.getInstance().build(JumpUtil.PageBegin.BEGIN_ACTIVITY)
+                        .withString("key", "begin key")
+                        .navigation();
                 break;
             case R.id.am_btn_module4:
+                ARouter.getInstance().build(JumpUtil.PageModuleOne.START_ACTIVITY)
+                        .withString("key", "begin key")
+                        .navigation();
                 break;
             default:
                 break;

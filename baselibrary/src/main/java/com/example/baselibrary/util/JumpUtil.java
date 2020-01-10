@@ -25,7 +25,7 @@ public class JumpUtil {
 
     public static final  String PAGE_MODULE_ONE = "/moduleOne";
     public static final class PageModuleOne{
-        public static final String STRART_ACTIVITY = PAGE_MODULE_ONE + "/mainActivity";
+        public static final String START_ACTIVITY = PAGE_MODULE_ONE + "/mainActivity";
     }
 
 }

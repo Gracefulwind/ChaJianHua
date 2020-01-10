@@ -26,6 +26,12 @@ android {
         versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -97,4 +103,7 @@ dependencies {
     implementation rootProject.ext.dependencies.gson
     implementation rootProject.ext.dependencies.permission
 
+    //aRouter
+    annotationProcessor rootProject.ext.dependencies.arouterCompiler
+    implementation project(":baselibrary")
 }
