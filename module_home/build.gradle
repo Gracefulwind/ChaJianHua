@@ -32,9 +32,16 @@ android {
     }
 
     buildTypes {
+
+        debug{
+            buildConfigField("String", "projectName", "\"" + project.getName() + "\"")
+        }
         release {
+
+            initWith(debug)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            buildConfigField("String", "projectName", "release == " + project.getName())
         }
     }
 

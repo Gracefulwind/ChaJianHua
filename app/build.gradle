@@ -29,21 +29,24 @@ android {
     }
     buildTypes {
 
+
         debug{
 //            def isShowLoaCat = true
-            buildConfigField('boolean', 'isShowLoaCat', "true")
             buildConfigField('String', 'APIVersionName', rootProject.ext.configField["APIVersionName"])
             buildConfigField('String', 'APIVersionCode', rootProject.ext.configField["APIVersionCode"])
+            buildConfigField("String", "projectName", "\"" + project.getName() + "\"")
+
+            buildConfigField('boolean', 'isShowLoaCat', "true")
             buildConfigField('String', 'ServerAddress', rootProject.ext.configField["ServerAddress_debug"])
         }
 
         release {
+//            buildConfigField('String', 'APIVersionName', rootProject.ext.configField["APIVersionName"])
+//            buildConfigField('String', 'APIVersionCode', rootProject.ext.configField["APIVersionCode"])
+            initWith(debug)
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
             buildConfigField('boolean', 'isShowLoaCat', "false")
-            buildConfigField('String', 'APIVersionName', rootProject.ext.configField["APIVersionName"])
-            buildConfigField('String', 'APIVersionCode', rootProject.ext.configField["APIVersionCode"])
             buildConfigField('String', 'ServerAddress', rootProject.ext.configField["ServerAddress_release"])
         }
     }
