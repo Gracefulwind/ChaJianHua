@@ -1,6 +1,7 @@
 ext {
 //    isBuildApp = true
     isBuildApp = false
+    useLocalProject = true
 
     android = [
             compileSdkVersion       : 29,

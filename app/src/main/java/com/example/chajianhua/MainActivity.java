@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.baselibrary.base.BaseActivity;
 import com.example.baselibrary.util.JumpUtil;
 import com.example.moduleone.MoMainActivity;
+import com.example.mytestlibrary.util.TestLibUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,18 +40,14 @@ public class MainActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.am_btn_module1:
-                System.out.println("======click1======");
-                Intent intent = new Intent();
-                intent.setClass(this, MoMainActivity.class);
-                startActivity(intent);
-
+//                System.out.println("======click1======");
+//                Intent intent = new Intent();
+//                intent.setClass(this, MoMainActivity.class);
+//                startActivity(intent);
+//                TestLibUtil.testLib();
+                ARouter.getInstance().build("/test/TestMyArouterActivity").navigation();
                 break;
             case R.id.am_btn_module2:
-//                ARouter.getInstance()
-//                        .build(JumpUtil.HomeActivity) //页面的String值
-////                .withString("key",s) //附带参数
-//                        .navigation();
-//                ARouter.getInstance().build("/test/home").navigation();
                 ARouter.getInstance().build(JumpUtil.PageHome.HOME_ACTIVITY).navigation();
                 break;
             case R.id.am_btn_module3:

@@ -116,8 +116,8 @@ dependencies {
     implementation rootProject.ext.dependencies.gson
     implementation rootProject.ext.dependencies.permission
 
-    implementation rootProject.ext.dependencies.arouterApi
-    annotationProcessor rootProject.ext.dependencies.arouterCompiler
+//    implementation rootProject.ext.dependencies.arouterApi
+//    annotationProcessor rootProject.ext.dependencies.arouterCompiler
     implementation project(path: ':baselibrary')
 
     if (rootProject.ext.isBuildApp) {
@@ -127,4 +127,11 @@ dependencies {
         implementation project(':module_begin')
         implementation project(':module_home')
     }
+
+    if(!rootProject.ext.useLocalProject){
+        api project(path: ':../ChangeableUI/mytestlibrary')
+    }else {
+        api 'com.github.Gracefulwind:ChangeableUI:1.1'
+    }
+
 }
