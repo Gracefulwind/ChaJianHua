@@ -127,11 +127,10 @@ dependencies {
         implementation project(':module_begin')
         implementation project(':module_home')
     }
-
-    if(!rootProject.ext.useLocalProject){
-        api project(path: ':../ChangeableUI/mytestlibrary')
+    if(rootProject.ext.useLocalProject){
+        implementation project(':mytestlibrary')
     }else {
-        api 'com.github.Gracefulwind:ChangeableUI:1.1'
+        implementation 'com.github.Gracefulwind:ChangeableUI:1.1'
     }
 
 }

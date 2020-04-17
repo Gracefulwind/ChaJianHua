@@ -1,2 +1,12 @@
-include ':app', ':moduleone', ':mylibrary', ':baselibrary', ':module_begin', ':module_home'
+include ':app', ':moduleone', ':mylibrary', ':baselibrary', ':module_begin'
+include ':module_home'
+
+include ':mytestlibrary'
+project(':mytestlibrary').projectDir = new File(settingsDir, "../ChangeableUI/mytestlibrary")
+//project ('mytestlibrary').projectDir = new File("$rootProject.getPath" + "../ChangeableUI/mytestlibrary")
+//project ('mytestlibrary').projectDir = new File('D:/workspace/learn/ChangeableUI/mytestlibrary')
+//project ('module_home').projectDir = "$rootDir/module_home" as File
+//project ('mytestlibrary').projectDir = '../ChangeableUI/mytestlibrary'
+//project ('mytestlibrary').projectDir = new File('D:/workspace/learn/ChangeableUI/mytestlibrary')
+
 rootProject.name='ChaJianHua'
