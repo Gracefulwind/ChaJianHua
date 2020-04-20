@@ -11,6 +11,7 @@ import com.example.baselibrary.base.BaseActivity;
 import com.example.baselibrary.util.JumpUtil;
 import com.example.moduleone.MoMainActivity;
 import com.example.mytestlibrary.util.TestLibUtil;
+import com.gracefulwind.commonuiutil.utils.ShapeUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,7 +45,8 @@ public class MainActivity extends BaseActivity {
 //                Intent intent = new Intent();
 //                intent.setClass(this, MoMainActivity.class);
 //                startActivity(intent);
-//                TestLibUtil.testLib();
+                TestLibUtil.testLib();
+//                ShapeUtil.createCardShape()
                 ARouter.getInstance().build("/test/TestMyArouterActivity").navigation();
                 break;
             case R.id.am_btn_module2:
